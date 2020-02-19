@@ -269,7 +269,7 @@ void setup()
   digitalWrite(LED_PIN, ledState);
 
   // Serial
-  Serial.begin (9600);
+  //Serial.begin (9600);
 
   // ******************************************************* KY404 SETUP
   // Initialization of the input-pins...
@@ -326,25 +326,25 @@ void loop()
       direction = true;
       counterCheck(Counter, direction);
 
-      Serial.print("Current brightness: ");
-      Serial.println(currentBrightness);
-      Serial.println("------------------------------");
-
-      Serial.print("Current color: ");
-      Serial.println(currentColor);
-      Serial.println("------------------------------");
-
-      Serial.print("Current height: ");
-      Serial.println(currentHeight);
-      Serial.println("------------------------------");
-
-      Serial.print("maxCount: ");
-      Serial.println(maxCounter);
-      Serial.println("------------------------------");
-
-      Serial.print("currentStripeVariation: ");
-      Serial.println(currentStripeVariation);
-      Serial.println("------------------------------");
+//      Serial.print("Current brightness: ");
+//      Serial.println(currentBrightness);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("Current color: ");
+//      Serial.println(currentColor);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("Current height: ");
+//      Serial.println(currentHeight);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("maxCount: ");
+//      Serial.println(maxCounter);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("currentStripeVariation: ");
+//      Serial.println(currentStripeVariation);
+//      Serial.println("------------------------------");
 
 
 
@@ -357,43 +357,43 @@ void loop()
       direction = false;
       counterCheck(Counter, direction);
 
-      Serial.print("Current brightness: ");
-      Serial.println(currentBrightness);
-      Serial.println("------------------------------");
-
-      Serial.print("Current color: ");
-      Serial.println(currentColor);
-      Serial.println("------------------------------");
-
-      Serial.print("Current height: ");
-      Serial.println(currentHeight);
-      Serial.println("------------------------------");
-
-      Serial.print("maxCount: ");
-      Serial.println(maxCounter);
-      Serial.println("------------------------------");
-
-      Serial.print("currentStripeVariation: ");
-      Serial.println(currentStripeVariation);
-      Serial.println("------------------------------");
+//      Serial.print("Current brightness: ");
+//      Serial.println(currentBrightness);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("Current color: ");
+//      Serial.println(currentColor);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("Current height: ");
+//      Serial.println(currentHeight);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("maxCount: ");
+//      Serial.println(maxCounter);
+//      Serial.println("------------------------------");
+//
+//      Serial.print("currentStripeVariation: ");
+//      Serial.println(currentStripeVariation);
+//      Serial.println("------------------------------");
 
 
       lampControl();
 
 
     }
-    Serial.println("Rotational direction: ");
-
-    if (direction)
-    {
-      Serial.println ("Clockwise");
-    }
-    else
-    {
-      Serial.println("Counterclockwise");
-      Serial.print("Adresse zum Ausschalten");
-      Serial.println(startStripe_1 + currentHeight - 1);
-    }
+//    Serial.println("Rotational direction: ");
+//
+//    if (direction)
+//    {
+//      Serial.println ("Clockwise");
+//    }
+//    else
+//    {
+//      Serial.println("Counterclockwise");
+//      Serial.print("Adresse zum Ausschalten");
+//      Serial.println(startStripe_1 + currentHeight - 1);
+//    }
 
 
 
@@ -415,18 +415,18 @@ void loop()
       lampMode = 1;
     }
     lampControl();
-    Serial.print("lampMode: ");
-    Serial.println(lampMode);
-    Serial.println("------------------------------");
-
-    Serial.print("Current position: ");
-    Serial.println(Counter);
-    Serial.println("------------------------------");
+//    Serial.print("lampMode: ");
+//    Serial.println(lampMode);
+//    Serial.println("------------------------------");
+//
+//    Serial.print("Current position: ");
+//    Serial.println(Counter);
+//    Serial.println("------------------------------");
   }
 
   if (button.doubleTapped() == true) {
-    Serial.println("DOUBLE-TAP event detected");
-    Serial.println("RAINBOW MODE!!!");
+//    Serial.println("DOUBLE-TAP event detected");
+//    Serial.println("RAINBOW MODE!!!");
     rainbowMode = !rainbowMode;
     if(rainbowMode){
        rainbow(LWAIT);
@@ -434,7 +434,7 @@ void loop()
   }
 
   if (button.held() == true) {
-    Serial.println("HOLD event detected");
+//  Serial.println("HOLD event detected");
     // switch off the lamp
     lampMode = 0;
     lampControl();
@@ -737,12 +737,12 @@ void setStripeVariation(uint16_t count) {
   stripeStates[3] = bitRead(variations, 1);
   stripeStates[4] = bitRead(variations, 0);
 
-  Serial.println("Stripe State");
-  for (uint16_t i = 0; i < 5; i++) {
-    Serial.print(i + 1);
-    Serial.print(" ---- Value ");
-    Serial.println(stripeStates[i]);
-  }
+//  Serial.println("Stripe State");
+//  for (uint16_t i = 0; i < 5; i++) {
+//    Serial.print(i + 1);
+//    Serial.print(" ---- Value ");
+//    Serial.println(stripeStates[i]);
+//  }
 }
 
 // Fill the dots one after the other with a color backward
