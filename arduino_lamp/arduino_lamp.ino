@@ -583,7 +583,7 @@ void counterCheck(int32_t count, boolean clockwise) {
         currentBrightness -= brightnessFactor;
       }
 
-      if (currentBrightness > maxCounter) {
+      if (currentBrightness > maxCounter) {s
         currentBrightness = maxCounter;
       }
       if (currentBrightness < brightnessFactor + 1) {
